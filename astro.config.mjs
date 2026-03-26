@@ -7,7 +7,7 @@ export default defineConfig({
 				site: 'https://example.com',
 				integrations: [
 					starlight({
-												title: 'My Docs',
+												title: 'OpenChip',
 												pagefind: true,
 												social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 				defaultLocale: 'en',
