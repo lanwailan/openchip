@@ -1,21 +1,14 @@
 ---
-title: NXP Semiconductors
-description: NXP 微控制器和半导体产品文档
+title: NXP Semiconductors Documentation
+description: Comprehensive documentation for NXP semiconductors and microcontrollers
 ---
 
-# NXP Semiconductors 文档中心
+# NXP Semiconductors Documentation
 
-欢迎来到 NXP Semiconductors 产品文档中心。
+Browse our comprehensive collection of semiconductor documentation, user manuals, and technical resources.
 
-## 主要产品系列
+## Available Documentation
 
-- i.MX 应用处理器
-- S32 汽车处理器
-- Kinetis 微控制器
-- LPC 微控制器
-
-## 快速导航
-
-- [i.MX 用户手册](./imx/index.md)
-- [S32 汽车指南](./s32/index.md)
-- [Kinetis 开发资料](./kinetis/index.md)
+<CardGrid>
+  <Card title="Product Documentation" href="/nxp/products/">Detailed product documentation and datasheets</Card>
+</CardGrid>
