@@ -10,31 +10,17 @@ export default defineConfig({
 												title: 'My Docs',
 												pagefind: true,
 												social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+				defaultLocale: 'en',
+				locales: {
+					en: {
+						label: 'English',
+						lang: 'en-US',
+					},
+					zh: {
+						label: '简体中文',
+						lang: 'zh-CN',
+					},
 				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-				{
-					label: 'Infineon',
-					autogenerate: { directory: 'infineon' },
-				},
-				{
-					label: 'ST',
-					autogenerate: { directory: 'st' },
-				},
-				{
-					label: 'NXP',
-					autogenerate: { directory: 'nxp' },
-				},
-			],
-		}),
-	],
+			}),
+		],
 });

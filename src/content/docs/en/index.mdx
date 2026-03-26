@@ -1,0 +1,23 @@
+---
+title: Welcome to Starlight
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: Explore Comprehensive Chip Documentation
+  image:
+    file: ./assets/houston.webp
+  actions:
+    - text: Infineon Documentation
+      link: /en/infineon/
+      icon: right-arrow
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
+      icon: external
+      variant: minimal
+---
+
+import DynamicManufacturerCards from '../../../components/DynamicManufacturerCards.astro';
+
+## Next steps
+
+<DynamicManufacturerCards locale="en" />

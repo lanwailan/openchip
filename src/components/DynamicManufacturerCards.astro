@@ -1,0 +1,44 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+// 获取所有文档
+const allDocs = await getCollection('docs');
+
+// 提取厂商信息（从 index.md 的 frontmatter 读取）
+const manufacturers: { slug: string; title: string; description: string }[] = [];
+
+allDocs.forEach(doc => {
+  const parts = doc.id.split('/');
+  // 匹配直接子目录（厂商），如 en/infineon
+  if (parts[0] === locale && parts.length === 2) {
+    const slug = parts[1];
+    // 避免重复
+    if (!manufacturers.find(m => m.slug === slug)) {
+      const title = doc.data.title || slug;
+      const description = doc.data.description || `${title} ${locale === 'zh' ? '文档' : 'documentation'}`;
+      manufacturers.push({ slug, title, description });
+    }
+  }
+});
+
+const linkText = locale === 'zh' ? '查看文档 →' : 'View documentation →';
+---
+
+<CardGrid stagger>
+  {manufacturers.map(manufacturer => (
+    <Card 
+      title={manufacturer.title}
+      icon="chip"
+    >
+      {manufacturer.description}
+      <a href={`/${locale}/${manufacturer.slug}/`}>{linkText}</a>
+    </Card>
+  ))}
+</CardGrid>
