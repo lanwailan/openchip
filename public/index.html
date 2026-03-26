@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OpenChip</title>
+    <script>
+        // 检测浏览器语言并跳转
+        const lang = navigator.language || navigator.userLanguage;
+        if (lang.startsWith('zh')) {
+            window.location.href = '/zh/';
+        } else {
+            window.location.href = '/en/';
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/en/">
+    </noscript>
+</head>
+<body>
+    <p>Redirecting...</p>
+    <p>If you are not redirected automatically, please select your language:</p>
+    <ul>
+        <li><a href="/en/">English</a></li>
+        <li><a href="/zh/">简体中文</a></li>
+    </ul>
+</body>
+</html>
