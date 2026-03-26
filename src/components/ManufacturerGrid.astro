@@ -1,0 +1,34 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+// 获取制造商列表
+const manufacturers = [
+  { 
+    name: 'Infineon', 
+    slug: 'infineon',
+    description: 'Explore comprehensive documentation for Infineon\'s semiconductor solutions including AURIX microcontrollers, power management chips, and automotive electronics.'
+  },
+  { 
+    name: 'ST', 
+    slug: 'st',
+    description: 'Discover ST\'s extensive range of microcontrollers, sensors, power devices, and analog components for various applications.'
+  },
+  { 
+    name: 'NXP', 
+    slug: 'nxp',
+    description: 'Access documentation for NXP\'s automotive, industrial, and IoT solutions including i.MX processors and secure connectivity products.'
+  }
+];
+---
+
+<CardGrid stagger>
+  {manufacturers.map((manufacturer) => (
+    <Card 
+      title={manufacturer.name} 
+      href={`/docs/${manufacturer.slug}/`}
+      icon="chip"
+    >
+      {manufacturer.description}
+    </Card>
+  ))}
+</CardGrid>

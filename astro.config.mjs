@@ -4,10 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+				site: 'https://example.com',
+				integrations: [
+					starlight({
+												title: 'My Docs',
+												pagefind: true,
+												social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
 					label: 'Guides',
@@ -19,6 +21,18 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},
+				{
+					label: 'Infineon',
+					autogenerate: { directory: 'infineon' },
+				},
+				{
+					label: 'ST',
+					autogenerate: { directory: 'st' },
+				},
+				{
+					label: 'NXP',
+					autogenerate: { directory: 'nxp' },
 				},
 			],
 		}),
