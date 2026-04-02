@@ -1,11 +1,11 @@
 ---
 title: "1.1.8 Abbreviations and Acronyms"
-description: "Abbreviations and acronyms used in AURIX TC3XX documentation"
+description: "Abbreviations and Acronyms used in AURIX TC3XX documentation"
 ---
 
 # 1.1.8 Abbreviations and Acronyms
 
-**Table 8: Abbreviations and Acronyms**
+**Table 7: Abbreviations and Acronyms**
 
 | Acronym | Description |
 |---------|-------------|
